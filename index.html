@@ -4,10 +4,10 @@
 <head>
 	<meta charset="utf-8">
 
-	<title>reveal.js - The HTML Presentation Framework</title>
+	<title>AngularJS - Developer Kärnten Meetup</title>
 
-	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-	<meta name="author" content="Hakim El Hattab">
+	<meta name="description" content="A little overview on AngularJS for the Developers Meetup Kärnten">
+	<meta name="author" content="Manfred Walder">
 
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -69,7 +69,7 @@
 				</section>
 			</section>
 			<section>
-					<h2>Features</h2>
+					<h2>Wozu hilft es mir?</h2>
 					<ul>
 						<li>DOM Manipulations (jqLite)</li>
 						<li>History</li>
@@ -112,13 +112,22 @@
 					<h2>Directives</h2>
 					<ul>
 						<li>Erweitern die Funktionalität von HTML Tags</li>
-						<li>Markieren DOM Elemente mittels Attribut, Element oder CSS Klasse</li>
+						<li>Hilfe bei Interaktionen mit DOM Elementen</li>
+						<li>Markierung mittels Attribut, Element oder CSS Klasse</li>
 					</ul>
 					<pre>
 						<code class="html">
-							&lt;!Doctype html&gt; &lt;html ng-app="demo" &gt; &lt;head&gt; &lt;meta charset=&quot;UTF-8&quot;&gt; &lt;title&gt;Document&lt;/title&gt; &lt;/head&gt; &lt;body&gt;
-							<div ng-repeat="member in members"></div>
-							&lt;/body&gt; &lt;/html&gt;
+	&lt;!Doctype html&gt;
+	&lt;html ng-app="demo" &gt;
+		&lt;head&gt;
+			&lt;meta charset=&quot;UTF-8&quot;&gt;
+			&lt;title&gt;Angular Demo&lt;/title&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+			Name: <input type="text" ng-model="name" />
+			<div ng-repeat="dev in devs"></div>
+		&lt;/body&gt;
+	&lt;/html&gt;
 						</code>
 					</pre>
 				</section>
@@ -133,6 +142,33 @@
 					</ul>
 					<pre>
 						<code class="js">var app = angular.module('demo',['ngRoute', 'ngAnimate']);</code>
+					</pre>
+				</section>
+				<section>
+					<h2>Expression</h2>
+					<p>Einbindung von Werten in die Ansicht</p>
+					<ul>
+						<li>Macht den Code besser wart- und lesbar</li>
+						<li>Erleichtert die Wiederverwendung von Funktionalitäten</li>
+						<li>Definition von Abhängigkeiten anderer Module</li>
+						<li>Die Hauptanwendung ist ein Modul</li>
+					</ul>
+					<pre>
+						<code class="html">
+	&lt;!Doctype html&gt;
+	&lt;html ng-app="demo" &gt;
+		&lt;head&gt;
+			&lt;meta charset=&quot;UTF-8&quot;&gt;
+			&lt;title&gt;Angular Demo&lt;/title&gt;
+		&lt;/head&gt;
+		&lt;body&gt;
+			Name: <input type="text" ng-model="name" />
+			<ul ng-repeat="dev in devs">
+				<li>{{dev.name}}</li>
+			</ul>
+		&lt;/body&gt;
+	&lt;/html&gt;
+						</code>
 					</pre>
 				</section>
 			</section>
