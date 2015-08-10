@@ -3,6 +3,8 @@
 This is about a little presentation about AngularJS in german language, made up for Carinthians DEV Meetup.
 All of the following description is from the original readme of [reveal.js](https://github.com/hakimel/reveal.js/)
 
+--
+
 #### More reading:
 - [Installation](#installation): Step-by-step instructions for getting reveal.js running on your computer.
 - [Changelog](https://github.com/hakimel/reveal.js/releases): Up-to-date version history.
